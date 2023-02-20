@@ -1,0 +1,10 @@
+<app-header [showWishlistHandler]="showWishlistHandler" [showHomeHandler]="showHomeHandler"></app-header>
+<app-search [updateSearchQuery]="updateSearchQuery"></app-search>
+<div class="row">
+    <div class="col" *ngIf="!showWishlist">
+        <app-booklist [books]="books" [addToWishlist]="addToWishlist"></app-booklist>
+    </div>
+    <div class="col">
+        <app-wishlist [wishlist]="wishlist" [removeFromWishlist]="removeFromWishlist"></app-wishlist>
+    </div>
+</div>

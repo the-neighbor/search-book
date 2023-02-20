@@ -1,0 +1,9 @@
+<div>
+    <mat-form-field id="search">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" [(ngModel)]="searchQuery" (change)="searchHandler($event)">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+</div>

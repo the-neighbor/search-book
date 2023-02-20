@@ -1,0 +1,21 @@
+<h1>Wishlist</h1>
+<div *ngFor="let wish of wishlist">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h1>{{wish.title}}</h1>
+            </mat-card-title>
+            <mat-card-subtitle>
+                <h2 *ngFor="let author of wish.authors">{{author || "No Author"}}</h2>
+                <h2>{{wish.publishedDate || "No Published Date"}}</h2>
+                <h2>{{wish.publisher || "No Publisher"}}</h2>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{wish.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="warn" (click)="removeFromWishlist(wish)">Remove</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
